@@ -1,32 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+
 *{
     margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-img{
-    width: 100px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Radio Canada Big", sans-serif;
+    
 }
 
 body {
+    background-color: #34495E;
     display: flex;
     justify-content: center;
     margin: 0 auto;
 }
 
-nav, .top-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-}
-
-.main-container {
+.main {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
 }
+
+li {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+}
+
+header {
+    border-radius: 20px;
+    position: relative;
+    top: 10px;
+    padding: 0 2rem;
+    background-color: #fff;
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a img {
+    width: 70px;
+    position: absolute;
+    left: 10px;
+    top: 3px;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .menu-button {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action-button {
+    position: relative;
+    right: -50px;
+    background-color: #E67E22;
+    color: #fff;
+    border: 1px solid #E67E22;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.action-button:hover {
+    border: 1px solid #fff;
+}
+
+/* *******Responsive Menu****** */
+
+
+
