@@ -64,7 +64,7 @@ header {
 }
 
 .navbar .links li a {
-    color:#000;
+    color: #f39c12;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
 }
@@ -168,13 +168,13 @@ header {
   /* Icône à gauche */
   .container-two-section::before {
     left: -50px;
-    background-image: url('images/what-icon.png'); /* Chemin vers l'image de l'icône de gauche */
+    background-image: url('images/what-icon.png'); 
   }
   
   /* Icône à droite */
   .container-two-section::after {
-    right: -150px;
-    background-image: url('images/Sun-icon.png'); /* Chemin vers l'image de l'icône de droite */
+    right: 0;
+    background-image: url('images/Sun-icon.png'); 
     color: #e67e22;
   }
   
@@ -223,6 +223,7 @@ h1 .what {
     font-family: "Londrina Solid", sans-serif;
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: rgba(46, 204, 113,0.7);
 }
 
 .container-two-section cite {
@@ -237,18 +238,19 @@ h1 .what {
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
+    gap: 20px;
     padding: 20px;
-    background-color: #34495E; /* Couleur de fond optionnelle */
+    background-color: #f0f0f0; /* Couleur de fond optionnelle */
 }
 
 /* Style pour chaque carte */
 .card {
+    position: relative; /* Nécessaire pour les pseudo-éléments */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 20px;
     background-color: white; /* Couleur de fond de la carte */
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -275,3 +277,348 @@ h1 .what {
     font-family: "Montserrat", sans-serif;
 }
 
+/* ************************************************************************************** */
+
+.cards-container-dom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style pour les cartes avec image de fond */
+.card-with-bg {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-with-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Couleur de superposition sombre */
+    border-radius: 50px;
+}
+
+.card-with-bg p {
+    position: relative;
+    z-index: 1;
+    color: white; 
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.what-text {
+    padding: 50px 40%;
+}
+
+.what-text h1 {
+    font-family: "Poppins", sans-serif;
+    /* font-weight: 700; */
+}
+
+/* ********************************************************************************* */
+
+.container-engagement {
+    padding: 10px 25%; /* Paddings en pourcentage pour les côtés */
+    position: relative; /* Pour permettre le positionnement absolu des icônes */
+    background-color: #f9f9f9; /* Couleur de fond optionnelle */
+}
+
+.container-engagement h1 {
+    margin: 20px 0;
+    color: #e67e22;
+    padding: 15px 0;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.container-engagement p {
+    margin: 20px 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.container-engagement blockquote {
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color : rgba(52, 152, 219,0.7);
+}
+
+.container-engagement cite {
+    padding: 20px;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ************************************************************ */
+
+.start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -80px;
+}
+
+.start img {
+    margin: 30px;
+    width: 100px;
+}
+
+.next-collaboration {
+    background-color: #34495E;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    padding: 50px;
+}
+
+.sub {
+    padding: 0 10rem;
+}
+
+.sub h2 {
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.sub p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.next-collaboration a {
+    border: 1px solid none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
+    background-color: #e67e22;
+    color: #fff;
+}
+
+/* Style général pour la section d'actualités */
+/* Style général pour la section d'actualités */
+.news-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.news-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+.news-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Style pour chaque carte d'actualité */
+.news-card {
+    position: relative; /* Nécessaire pour les pseudo-éléments */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: white;
+    height: 300px; /* Hauteur fixe pour les cartes */
+}
+
+.news-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Couleur de superposition sombre */
+    border-radius: 8px;
+}
+
+.news-content {
+    position: relative;
+    z-index: 1; /* Pour placer le texte au-dessus de la superposition */
+    color: white; /* Couleur du texte en blanc */
+}
+
+.news-content h3 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    color: #c47b05;
+    font-family: "Poppins", sans-serif;
+}
+
+.news-content p {
+    color: #ddd;
+    margin: 5px 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.news-content .read-more {
+    align-self: flex-start;
+    text-decoration: none;
+    color: #2ECC71;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.news-content .read-more i {
+    margin-left: 5px;
+    transition: transform 0.3s;
+    color: white;
+    border: 1px solid;
+    border-radius: 50%; /* Pour rendre l'icône circulaire */
+    padding: 8px; /* Ajustez selon la taille souhaitée */
+    font-size: 15px; /* Ajustez la taille de l'icône si nécessaire */
+}
+
+.news-content .read-more:hover i {
+    transform: translateX(5px);
+    background-color: #2ECC71;
+}
+
+/* **************************************************************************** */
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Centring the slogan and bottom text */
+.footer-devise, .footer-bottom {
+    text-align: center;
+}
+
+.footer-devise h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: white;
+    margin: 20px 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+/* Style for each section in the footer */
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-contact, .footer-social {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer-contact h4, .footer-social h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.8rem;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+    color: #2ECC71;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+/* Specific styles for each social media icon */
+.footer-social .facebook:hover,
+.footer-social .facebook:active {
+    color: #3b5998;
+}
+
+.footer-social .twitter:hover,
+.footer-social .twitter:active {
+    color: #00acee;
+}
+
+.footer-social .instagram:hover,
+.footer-social .instagram:active {
+    color: #e1306c;
+}
+
+.footer-social .linkedin:hover,
+.footer-social .linkedin:active {
+    color: #0077b5;
+}
+
+/* Style for bottom footer text */
+.footer-bottom p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.footer-bottom a {
+    color: #2ECC71;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
