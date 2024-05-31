@@ -12,7 +12,7 @@
 header {
     height: 100vh;
     width: 100vw;
-    background-image: url(images/Logo\(1\).png);
+    background-image: url(images/ramada.jpg);
     background-size: cover;
 }
 
@@ -22,10 +22,10 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
-  li {
+li {
     list-style: none;
     text-transform: uppercase;
 }
@@ -49,6 +49,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 2;
+    position: relative;
 }
 
 .navbar .logo a img {
@@ -60,15 +62,54 @@ header {
 
 .navbar .links {
     display: flex;
-    gap: 2rem;
+    gap: 5rem;
 }
+
+nav.links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav.links ul li {
+    display: inline;
+}
+
 
 .navbar .links li a {
-    color: #f39c12;
+    text-decoration: none;
+    color: #fff;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    z-index: 1;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
 }
 
+.navbar .links li a:hover {
+    color: #ff6600; 
+    transform: translateY(-3px);
+}
+
+.navbar .links li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ff6600;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .links li a:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
 .navbar .menu-button {
     color: #fff;
     font-size: 1.5rem;
@@ -92,9 +133,8 @@ header {
     border: 1px solid #fff;
 }
 
-/* Conteneur de la citation */
 .citation-section {
-    height: 100vh; /* 30% de la hauteur de l'écran */
+    height: 100vh; 
     position: relative;
     display: flex;
     flex-direction: column;
@@ -104,33 +144,31 @@ header {
     background-position: center;
     padding: 20px;
     text-align: center;
-    color: #ffffff; /* Couleur du texte */
+    color: #ffffff;
   }
   
-  /* Recouvrement pour améliorer la lisibilité du texte */
   .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5); 
   }
-  
-  /* Style du texte de la citation */
+
   .citation-text {
-    font-family: 'Open Sans', sans-serif; /* Police élégante pour la citation */
+    font-family: 'Open Sans', sans-serif; 
     font-size: 3em;
     margin: 0 0 20px 0;
-    z-index: 1; /* Assure que le texte soit au-dessus de l'overlay */
+    z-index: 1;
   }
   
-  /* Style du bouton CTA */
+
   .cta-button {
-    font-family: 'Montserrat', sans-serif; /* Police du bouton */
+    font-family: 'Montserrat', sans-serif;
     font-size: 1em;
-    color: #ffffff; /* Couleur du texte */
-    background-color: #E67E22; /* Couleur de fond vert émeraude */
+    color: #ffffff; 
+    background-color: #E67E22;
     text-transform: uppercase;
     padding: 10px 20px;
     font-family: 'Montserrat', sans-serif;
@@ -138,21 +176,20 @@ header {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    z-index: 1; /* Assure que le bouton soit au-dessus de l'overlay */
+    z-index: 1; 
   }
   
   .cta-button:hover {
-    background-color: #34495E; /* Couleur de fond légèrement plus foncée au survol */
+    background-color: #34495E; 
   }
 
-/* Style général pour la section */
 .container-two-section {
-    padding: 10px 25%; /* Paddings en pourcentage pour les côtés */
-    position: relative; /* Pour permettre le positionnement absolu des icônes */
-    background-color: #f9f9f9; /* Couleur de fond optionnelle */
+    padding: 10px 25%; 
+    position: relative; 
+    background-color: #f9f9f9;
   }
   
-  /* Icônes à gauche et à droite */
+
   .container-two-section::before,
   .container-two-section::after {
     content: '';
@@ -164,14 +201,12 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
   }
-  
-  /* Icône à gauche */
+
   .container-two-section::before {
     left: -50px;
     background-image: url('images/what-icon.png'); 
   }
   
-  /* Icône à droite */
   .container-two-section::after {
     right: 0;
     background-image: url('images/Sun-icon.png'); 
@@ -232,26 +267,23 @@ h1 .what {
     font-family: 'Open Sans', sans-serif;
 }
 
-/* ******************************************************************** */
-
-/* Style général pour les cartes */
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
-    background-color: #f0f0f0; /* Couleur de fond optionnelle */
+    background-color: #f0f0f0;
 }
 
 /* Style pour chaque carte */
 .card {
-    position: relative; /* Nécessaire pour les pseudo-éléments */
+    position: relative; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: white; /* Couleur de fond de la carte */
+    background-color: white; 
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -262,18 +294,16 @@ h1 .what {
     width: 100px;
 }
 
-/* Style pour les icônes */
 .card i {
-    font-size: 2rem; /* Taille de l'icône */
-    color: #34495E; /* Couleur de l'icône */
+    font-size: 2rem; 
+    color: #34495E;
     margin-bottom: 10px;
 }
 
-/* Style pour les paragraphes */
 .card p {
     margin: 0;
     font-size: 2rem;
-    color: #333; /* Couleur du texte */
+    color: #333; 
     font-family: "Montserrat", sans-serif;
 }
 
@@ -302,7 +332,7 @@ h1 .what {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5); /* Couleur de superposition sombre */
+    background: rgba(0, 0, 0, 0.5); 
     border-radius: 50px;
 }
 
@@ -320,15 +350,14 @@ h1 .what {
 
 .what-text h1 {
     font-family: "Poppins", sans-serif;
-    /* font-weight: 700; */
 }
 
 /* ********************************************************************************* */
 
 .container-engagement {
-    padding: 10px 25%; /* Paddings en pourcentage pour les côtés */
-    position: relative; /* Pour permettre le positionnement absolu des icônes */
-    background-color: #f9f9f9; /* Couleur de fond optionnelle */
+    padding: 10px 25%; 
+    position: relative; 
+    background-color: #f9f9f9; 
 }
 
 .container-engagement h1 {
@@ -432,7 +461,7 @@ h1 .what {
 
 /* Style pour chaque carte d'actualité */
 .news-card {
-    position: relative; /* Nécessaire pour les pseudo-éléments */
+    position: relative; 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -443,7 +472,7 @@ h1 .what {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     color: white;
-    height: 300px; /* Hauteur fixe pour les cartes */
+    height: 300px;
 }
 
 .news-card::before {
@@ -453,14 +482,14 @@ h1 .what {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5); /* Couleur de superposition sombre */
+    background: rgba(0, 0, 0, 0.5); 
     border-radius: 8px;
 }
 
 .news-content {
     position: relative;
-    z-index: 1; /* Pour placer le texte au-dessus de la superposition */
-    color: white; /* Couleur du texte en blanc */
+    z-index: 1; 
+    color: white; 
 }
 
 .news-content h3 {
@@ -492,9 +521,9 @@ h1 .what {
     transition: transform 0.3s;
     color: white;
     border: 1px solid;
-    border-radius: 50%; /* Pour rendre l'icône circulaire */
-    padding: 8px; /* Ajustez selon la taille souhaitée */
-    font-size: 15px; /* Ajustez la taille de l'icône si nécessaire */
+    border-radius: 50%; 
+    padding: 8px; 
+    font-size: 15px; 
 }
 
 .news-content .read-more:hover i {
