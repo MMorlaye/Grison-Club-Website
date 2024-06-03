@@ -62,7 +62,7 @@ header {
 
 .navbar .links {
     display: flex;
-    gap: 5rem;
+    gap: 2rem;
 }
 
 nav.links ul {
@@ -119,6 +119,8 @@ nav.links ul li {
 
 .action-button {
     position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
     right: -10px;
     background-color: #E67E22;
     color: #fff;
@@ -170,6 +172,7 @@ nav.links ul li {
     color: #ffffff; 
     background-color: #E67E22;
     text-transform: uppercase;
+    font-weight: 600;
     padding: 10px 20px;
     font-family: 'Montserrat', sans-serif;
     border: none;
@@ -273,6 +276,7 @@ h1 .what {
     gap: 20px;
     padding: 20px;
     background-color: #f0f0f0;
+    margin-top: 50px;
 }
 
 /* Style pour chaque carte */
@@ -282,8 +286,10 @@ h1 .what {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     padding: 20px;
     background-color: white; 
+    cursor: pointer;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -336,6 +342,20 @@ h1 .what {
     border-radius: 50px;
 }
 
+.cards-container-dom a .card {
+    position: relative; 
+    display: flex;
+    overflow: hidden;
+    padding: 20px;
+    background-color: white; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 50vh;
+}
+
 .card-with-bg p {
     position: relative;
     z-index: 1;
@@ -344,12 +364,19 @@ h1 .what {
     font-family: "Montserrat", sans-serif;
 }
 
+.cards-container-dom .card:hover {
+    transform: scale(1.05);
+}
+
+
 .what-text {
+    margin: 20px 0;
     padding: 50px 40%;
 }
 
 .what-text h1 {
     font-family: "Poppins", sans-serif;
+    color: #0077b5;
 }
 
 /* ********************************************************************************* */
@@ -428,7 +455,7 @@ h1 .what {
     color: #fff;
 }
 
-.next-collaboration a {
+.btn-adhesion {
     border: 1px solid none;
     border-radius: 50px;
     padding: 15px 30px;
@@ -436,19 +463,26 @@ h1 .what {
     font-family: "Poppins", sans-serif;
     background-color: #e67e22;
     color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-adhesion:hover {
+    background: linear-gradient(45deg, #ff4800, #007BFF);
 }
 
 /* Style général pour la section d'actualités */
 /* Style général pour la section d'actualités */
 .news-section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     background-color: #f9f9f9;
+    margin: 30px 0;
 }
 
 .news-section h2 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: #333;
     font-family: "Poppins", sans-serif;
 }
@@ -547,11 +581,22 @@ footer {
 
 .footer-devise h3 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: "Poppins", sans-serif;
+}
 
+.work {
+    color: #0077b5;
+}
+
+.rigor {
+    color: #c47b05;
+}
+
+.success {
+    color: #2ECC71;
 }
 
 hr {
