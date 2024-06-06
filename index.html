@@ -8,31 +8,31 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
 </head>
 <body>
     <header>
         <div class="overlay"></div> <!-- Utilisé pour assombrir l'image pour améliorer la lisibilité -->
-        <div class="navbar">
+        <nav class="navbar">
             <div class="logo">
                 <a href="#"><img src="images/Logo-removebg-preview(1).png" alt=""></a>
             </div>
-            <nav class="links">
+            <div class="nav-links">
+                <div class="responsive-logo">
+                    <a href="#"><img src="images/Logo-removebg-preview(1).png" alt=""></a>
+                </div>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
                     <li><a href="#">Nos actions</a></li>
                     <li><a href="#">Formations</a></li>
                     <li><a href="#">Notre organisation</a></li>
                     <li><a href="#">Actualités</a></li>
                     <li><a href="#">Galerie</a></li>
+                    <li><a href="#" class="action-button">Accès Membre</a></li>
                 </ul>
-            </nav>
-            <div class="button">
-                <a href="#" class="action-button">Accès Membre</a>
             </div>
-            <div class="menu-button">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
+            <img src="images/menu.png" alt="menu" class="menu filtered-image">
+        </nav>
 
         <div class="citation-section">
             <p class="citation-text">"Se réunir est un début, rester ensemble est un progrès, travailler ensemble est la réussite" - Henri Ford</p>
@@ -173,7 +173,7 @@
     
     <footer>
         <div class="footer-devise">
-            <h3><span class="work">Travail</span>, <span class="rigor">Rigueur</span>, <span class="success">Réussite</span></h3>
+            <h3> <span class="work">Travail</span>, <span class="rigor">Rigueur</span>, <span class="success"></span> Réussite</h3>
         </div>
         <hr>
         <div class="footer-content">
